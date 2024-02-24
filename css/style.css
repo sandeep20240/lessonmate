@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.tiptap ul p,
+.tiptap ol p {
+    @apply inline;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+    @apply pointer-events-none float-left h-0 text-sm;
+}
+
+.boei-helper {
+    font-weight: normal !important;
+}
+
+#boei_button_close {
+    display: none;
+}
+
+#boei_background_fade {
+    background-color: black !important;
+    opacity: 0.7 !important;
+}
+
+#boei_feedback_form button {
+    padding: 12px !important;
+}
+
+#demo-message {
+    line-height: 1.5;
+    background: #1aaaaa;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.fleeq-link,
+.fleeq-link a {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.uploadcare--powered-by {
+    display: none;
+}
+
+#uploadcare-button-SQUARE {
+    background: transparent !important;
+    border: 3px solid #777 !important;
+    border-radius: 0.125rem !important;
+    box-shadow: none !important;
+    padding: 0;
+    width: 260px;
+    height: 200px;
+    margin: 0 36px 36px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#uploadcare-button #add-button {
+    /* font-size: 5rem !important; */
+    /* color: #777 !important; */
+}
+
+button.uploadcare--button_primary {
+    background: #4a8bee !important;
+    border-color: #4a8bee !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+button.uploadcare--button_size_big {
+    padding: 10px 25px !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+}
+
+button.uploadcare--dialog__close {
+    background: transparent !important;
+    color: #353535 !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+#progress-bar {
+    margin: 0.5rem 0;
+}

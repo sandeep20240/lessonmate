@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LessonMate</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+    />
+    <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script>
+
+    <link rel="apple-touch-icon" href="/assets/touch-icon-iphone.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/assets/touch-icon-ipad.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/assets/touch-icon-iphone-retina.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/assets/touch-icon-ipad-retina.png"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="/assets/application-9494aaa6c4488ac7a632c9b322ace1eddf653a1b086b7053d4352fc1408c87e0.css"
+    />
+    <script src="/assets/application-17b5bac2e5b377aa27a166cfe79860e1b08ecf1e6bba2292e1322467d0826dc2.js"></script>
+    <script
+      src="/assets/dist/alpine-9d10044639921cb29ce3ea0530ea4772aab995b96288db3e4451fdcc854d702c.js"
+      defer="defer"
+    ></script>
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta
+      name="csrf-token"
+      content="mQAjZc4n7USui/gqQcflRMkMZIxCJ1Hbttsugm52+12h7mOvx0eO+30rDnHxD1+vul1v+IlIPHkO98xSvODqZg=="
+    />
+    <!-- Links -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="">
+    <div class="bg-[#dddddd]">
+      <header class="p-4 max-w-[958px] mx-auto">
+        <div class="flex justify-between">
+          <a
+            class="font-semibold"
+            id="tour_Header_Title"
+            href="https://www.lessonmate.org"
+            >LessonMate at Demo School</a
+          >
+
+          <span class="">
+            <a rel="nofollow" data-method="delete" href="/users/sign_out"
+              >Sign In</a
+            >
+          </span>
+        </div>
+      </header>
+    </div>
+
+    <section class="max-w-[958px] mx-auto">
+      <div class="mt-4">
+        <div id="demo-message" class="font-bold px-4 text-[19px]">
+          Sign up for your
+          <a href="/sign-up" class="text-white underline">
+            free 14-day trial
+          </a>
+          or
+          <span class="underline">take a tour </span>
+          <br />
+        </div>
+        <div class="bg-white border my-5 p-4">
+          <!-- New Section -->
+          <div
+            class="flex justify-between pb-5 text-[20px] text-[#333333]"
+            id="tour_NewLesson_Header"
+          >
+            <div class="font-semibold flex align-items-center gap-x-3">
+              New lesson for The Student
+              <span class="my-auto">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="16" height="16" rx="8" fill="#CCD6DD" />
+                  <path
+                    d="M7.72647 10.916C7.46394 10.916 7.21216 10.8117 7.02652 10.6261C6.84088 10.4404 6.73659 10.1886 6.73659 9.92611V8.60627C6.73659 8.34374 6.84088 8.09196 7.02652 7.90632C7.21216 7.72068 7.46394 7.61639 7.72647 7.61639C7.92544 7.61441 9.70623 7.28643 9.70623 5.96659C9.70623 5.30667 9.04631 4.64675 8.05643 4.64675C7.251 4.64675 6.73659 5.30667 6.73659 5.63663C6.73659 5.76662 6.71099 5.89534 6.66124 6.01544C6.6115 6.13554 6.53858 6.24466 6.44667 6.33658C6.35475 6.4285 6.24562 6.50141 6.12553 6.55116C6.00543 6.60091 5.87671 6.62651 5.74672 6.62651C5.61672 6.62651 5.488 6.60091 5.3679 6.55116C5.24781 6.50141 5.13868 6.4285 5.04676 6.33658C4.95485 6.24466 4.88193 6.13554 4.83219 6.01544C4.78244 5.89534 4.75684 5.76662 4.75684 5.63663C4.75684 4.02709 6.26805 2.66699 8.05643 2.66699C10.6961 2.66699 11.686 4.64081 11.686 6.29655C11.686 7.66423 10.9347 8.70955 9.56996 9.23979C9.27299 9.35561 8.97933 9.43348 8.71635 9.48627V9.92611C8.71635 10.1886 8.61206 10.4404 8.42642 10.6261C8.24079 10.8117 7.98901 10.916 7.72647 10.916Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M7.72718 13.555C8.27388 13.555 8.71706 13.1118 8.71706 12.5651C8.71706 12.0184 8.27388 11.5752 7.72718 11.5752C7.18049 11.5752 6.7373 12.0184 6.7373 12.5651C6.7373 13.1118 7.18049 13.555 7.72718 13.555Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div class="flex align-items-center text-[#333333]">
+              <span class="mr-2 font-medium opacity-50 text-base"
+                >Show Steps:</span
+              >
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  name="show_lesson_steps"
+                  id="show_lesson_steps"
+                  value="1"
+                  x-on:click="steps = !steps"
+                  data-remote="true"
+                  data-url="/teachers/14307/update_show_lesson_steps"
+                  data-method="post"
+                  checked="checked"
+                />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <!-- Step 1  -->
+          <div
+            class="py-3 mb-4 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
+          >
+            Step 1. Give your lesson a descriptive title your students can
+            easily reference
+          </div>
+          <!-- Title Field  -->
+          <div>
+            <input
+              class="py-3 mb-4 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3 w-full"
+              required
+              autofocus="autofocus"
+              placeholder="Title (required)"
+              type="text"
+              name="lesson[title]"
+              id="lesson_title"
+            />
+          </div>
+          <!-- New Step 2-->
+          <div
+            class="py-3 mb-4 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
+          >
+            Step 2. Write notes - method books, page numbers, reminders +
+            YouTube
+          </div>
+          <section class="mb-4 w-full ">
+            <div
+              class="w-full  overflow-hidden rounded-xl border border-gray-300 bg-white"
+            >
+              <div id="hs-editor-tiptap">
+                <div
+                  class="m-1 flex items-center gap-0.5 rounded-lg bg-gray-100 p-1"
+                >
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-bold
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M12 11.6667H8M12 11.6667C12 11.6667 15.3333 11.6667 15.3333 8.33333C15.3333 5.00002 12 5 12 5C12 5 12 5 12 5H8.6C8.26863 5 8 5.26863 8 5.6V11.6667M12 11.6667C12 11.6667 16 11.6667 16 15.3333C16 19 12 19 12 19C12 19 12 19 12 19H8.6C8.26863 19 8 18.7314 8 18.4V11.6667"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-italic
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M11 5L14 5M17 5L14 5M14 5L10 19M10 19L7 19M10 19L13 19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-underline
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M16 5V11C16 13.2091 14.2091 15 12 15V15C9.79086 15 8 13.2091 8 11V5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M6 19L18 19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-strike
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M3 12L21 12"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M16.2857 3L10.068 3C7.82129 3 6 4.82129 6 7.06797C6 8.81895 7.12044 10.3735 8.78157 10.9272L12 12M6 21H13.932C16.1787 21 18 19.1787 18 16.932C18 16.2409 17.8255 15.5804 17.512 15"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-link
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M14 11.9976C14 9.5059 11.683 7 8.85714 7C8.52241 7 7.41904 7.00001 7.14286 7.00001C4.30254 7.00001 2 9.23752 2 11.9976C2 14.376 3.70973 16.3664 6 16.8714C6.36756 16.9525 6.75006 16.9952 7.14286 16.9952"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M10 11.9976C10 14.4893 12.317 16.9952 15.1429 16.9952C15.4776 16.9952 16.581 16.9952 16.8571 16.9952C19.6975 16.9952 22 14.7577 22 11.9976C22 9.6192 20.2903 7.62884 18 7.12383C17.6324 7.04278 17.2499 6.99999 16.8571 6.99999"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-ol
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M8 6L20 6"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4 6.01L4.01 5.99889"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4 12.01L4.01 11.9989"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4 18.01L4.01 17.9989"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M8 12L20 12"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M8 18L20 18"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-ul
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M9 5L21 5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M5 7L5 3L3.5 4.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M5.5 14L3.5 14L5.40471 11.0371C5.46692 10.9403 5.50215 10.8268 5.47709 10.7145C5.41935 10.4557 5.216 10 4.5 10C3.50001 10 3.5 10.8889 3.5 10.8889C3.5 10.8889 3.5 10.8889 3.5 10.8889L3.5 11.1111"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M4 19L4.5 19C5.05228 19 5.5 19.4477 5.5 20V20C5.5 20.5523 5.05228 21 4.5 21L3.5 21"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M3.5 17L5.5 17L4 19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9 12L21 12"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M9 19L21 19"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button
+                    class="relative grid h-10 max-h-[40px] w-10 max-w-[40px] select-none place-items-center rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                    type="button"
+                    data-hs-editor-code
+                  >
+                    <svg
+                      width="20px"
+                      height="20px"
+                      stroke-width="1.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      color="currentColor"
+                    >
+                      <path
+                        d="M13.5 6L10 18.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M6.5 8.5L3 12L6.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M17.5 8.5L21 12L17.5 15.5"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div
+                  data-hs-editor-field
+                  class="p-2 [&_*]:outline-none [&_.tiptap.ProseMirror]:min-h-[280px]"
+                ></div>
+              </div>
+            </div>
+          </section>
+          <!-- New Step 3-->
+          <div
+            class="py-3 mb-4 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
+          >
+            Step 3. Select whether this is a makeup lesson or not
+          </div>
+          <!-- Markup Radio Button-->
+          <div class="my-4 font-bold">
+            <span
+              id="tour_NewLesson_MakeupSwitch"
+              class="flex align-items-center"
+            >
+              <span>Makeup lesson?</span>
+              <label class="ms-2" for="lesson_lesson_makeup_true">Yes</label>
+              <input
+                class="ms-2 w-6"
+                type="radio"
+                value="true"
+                name="lesson[makeup]"
+                id="lesson_makeup_true"
+              />
+              <label class="ms-2" for="lesson_lesson_makeup_false">No</label>
+              <input
+                class="ms-2 w-6"
+                type="radio"
+                value="false"
+                name="lesson[makeup]"
+                id="lesson_makeup_false"
+              />
+              <span class="my-auto ms-4">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="16" height="16" rx="8" fill="#CCD6DD" />
+                  <path
+                    d="M7.72647 10.916C7.46394 10.916 7.21216 10.8117 7.02652 10.6261C6.84088 10.4404 6.73659 10.1886 6.73659 9.92611V8.60627C6.73659 8.34374 6.84088 8.09196 7.02652 7.90632C7.21216 7.72068 7.46394 7.61639 7.72647 7.61639C7.92544 7.61441 9.70623 7.28643 9.70623 5.96659C9.70623 5.30667 9.04631 4.64675 8.05643 4.64675C7.251 4.64675 6.73659 5.30667 6.73659 5.63663C6.73659 5.76662 6.71099 5.89534 6.66124 6.01544C6.6115 6.13554 6.53858 6.24466 6.44667 6.33658C6.35475 6.4285 6.24562 6.50141 6.12553 6.55116C6.00543 6.60091 5.87671 6.62651 5.74672 6.62651C5.61672 6.62651 5.488 6.60091 5.3679 6.55116C5.24781 6.50141 5.13868 6.4285 5.04676 6.33658C4.95485 6.24466 4.88193 6.13554 4.83219 6.01544C4.78244 5.89534 4.75684 5.76662 4.75684 5.63663C4.75684 4.02709 6.26805 2.66699 8.05643 2.66699C10.6961 2.66699 11.686 4.64081 11.686 6.29655C11.686 7.66423 10.9347 8.70955 9.56996 9.23979C9.27299 9.35561 8.97933 9.43348 8.71635 9.48627V9.92611C8.71635 10.1886 8.61206 10.4404 8.42642 10.6261C8.24079 10.8117 7.98901 10.916 7.72647 10.916Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M7.72718 13.555C8.27388 13.555 8.71706 13.1118 8.71706 12.5651C8.71706 12.0184 8.27388 11.5752 7.72718 11.5752C7.18049 11.5752 6.7373 12.0184 6.7373 12.5651C6.7373 13.1118 7.18049 13.555 7.72718 13.555Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </span>
+          </div>
+          <!-- New Step 4-->
+          <div
+            class="py-3 mb-4 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
+          >
+            Step 4. Record video(s) and upload files. Everything is saved in
+            your Library 😉
+          </div>
+          <!-- Buttons-->
+          <div class="lesson-attachment-buttons flex align-items-center">
+            <button
+              id="uploadcare-button"
+              class="bg-[#a7babe] font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full"
+            >
+              <span class="fa fa-plus"></span>
+              <span>Add New</span>
+            </button>
+
+            <button
+              id="tour_NewLesson_FaveButton"
+              class="ms-4 bg-[#a7babe] font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full fileinput-button toggle-faves-panel"
+            >
+              <span class="fa fa-plus"></span>
+              <span>Add Fave</span>
+            </button>
+
+            <button
+              id="uploadcare-button-record"
+              class="button bg-[#e74c3c] font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full ms-4 fileinput-button"
+            >
+              <span class="fa fa-plus"></span>
+              <span>Record Video</span>
+            </button>
+
+            <i
+              id="tip_attachment_buttons"
+              class="fa fa-question-circle tip-class margin-left"
+            ></i>
+          </div>
+          <!-- Step 5 -->
+
+          <div
+            class="py-3 my-4 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
+          >
+            Step 5. When you&#39;re done, hit Post 🚀
+          </div>
+          <!-- Post Button  -->
+          <div class="flex align-items-center gap-x-4">
+            <button
+              id=""
+              class="py-3 bg-[#480480] text-white rounded-md px-8 text-[22px] font-bold max-w-[268px] w-full"
+            >
+              Post Lesson
+            </button>
+            <span class="my-auto">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="16" height="16" rx="8" fill="#CCD6DD" />
+                <path
+                  d="M7.72647 10.916C7.46394 10.916 7.21216 10.8117 7.02652 10.6261C6.84088 10.4404 6.73659 10.1886 6.73659 9.92611V8.60627C6.73659 8.34374 6.84088 8.09196 7.02652 7.90632C7.21216 7.72068 7.46394 7.61639 7.72647 7.61639C7.92544 7.61441 9.70623 7.28643 9.70623 5.96659C9.70623 5.30667 9.04631 4.64675 8.05643 4.64675C7.251 4.64675 6.73659 5.30667 6.73659 5.63663C6.73659 5.76662 6.71099 5.89534 6.66124 6.01544C6.6115 6.13554 6.53858 6.24466 6.44667 6.33658C6.35475 6.4285 6.24562 6.50141 6.12553 6.55116C6.00543 6.60091 5.87671 6.62651 5.74672 6.62651C5.61672 6.62651 5.488 6.60091 5.3679 6.55116C5.24781 6.50141 5.13868 6.4285 5.04676 6.33658C4.95485 6.24466 4.88193 6.13554 4.83219 6.01544C4.78244 5.89534 4.75684 5.76662 4.75684 5.63663C4.75684 4.02709 6.26805 2.66699 8.05643 2.66699C10.6961 2.66699 11.686 4.64081 11.686 6.29655C11.686 7.66423 10.9347 8.70955 9.56996 9.23979C9.27299 9.35561 8.97933 9.43348 8.71635 9.48627V9.92611C8.71635 10.1886 8.61206 10.4404 8.42642 10.6261C8.24079 10.8117 7.98901 10.916 7.72647 10.916Z"
+                  fill="white"
+                />
+                <path
+                  d="M7.72718 13.555C8.27388 13.555 8.71706 13.1118 8.71706 12.5651C8.71706 12.0184 8.27388 11.5752 7.72718 11.5752C7.18049 11.5752 6.7373 12.0184 6.7373 12.5651C6.7373 13.1118 7.18049 13.555 7.72718 13.555Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#ddd] py-3 text-[#333333]">
+      <div
+        class="flex justify-between align-items-center max-w-[958px] mx-auto"
+      >
+        <div>&copy; LessonMate 2024 [c41996b]</div>
+        <div>
+          <a href="/terms/">Terms</a>
+          <a href="/privacy/">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Wyswing -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://sdk.fleeq.io/fleeq-sdk-light.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
