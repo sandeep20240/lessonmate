@@ -168,3 +168,27 @@ input:checked+.slider:before {
 input[type="radio"]:checked {
     background-color: red;
 }
+
+.d_hidden {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle+label:before {
+    content: "Hide ";
+}
+
+#toggle:checked+label:before {
+    content: "Show ";
+}
+
+#toggle:checked+.box {
+    display: none;
+}
+
+.box {
+    display: block;
+}
