@@ -71,15 +71,13 @@
           >
 
           <span class="">
-            <a rel="nofollow" data-method="delete" href="/users/sign_out"
-              >Sign In</a
-            >
+            <a rel="nofollow" href="/">Sign In</a>
           </span>
         </div>
       </header>
     </div>
 
-    <section class="max-w-[958px] mx-auto">
+    <section class="max-w-[958px] mx-auto min-h-screen">
       <div class="mt-4">
         <div id="demo-message" class="font-bold px-4 text-[19px]">
           Sign up for your
@@ -96,7 +94,7 @@
             class="flex justify-between pb-5 text-[20px] text-[#333333]"
             id="tour_NewLesson_Header"
           >
-            <div class="font-semibold flex align-items-center gap-x-3">
+            <div class="font-semibold flex items-center gap-x-3">
               New lesson for The Student
               <span class="my-auto">
                 <svg
@@ -118,8 +116,9 @@
                 </svg>
               </span>
             </div>
-            <div class="flex align-items-center text-[#333333]">
-              <span class="mr-2 font-medium opacity-50 text-base"
+            <div class="flex items-center text-[#333333]">
+              <span
+                class="mr-2 font-medium opacity-50 text-base whitespace-nowrap"
                 >Show Steps:</span
               >
 
@@ -177,22 +176,20 @@
           </div>
           <!-- Markup Radio Button-->
           <div class="my-4 font-bold">
-            <span
-              id="tour_NewLesson_MakeupSwitch"
-              class="flex align-items-center"
-            >
+            <span id="tour_NewLesson_MakeupSwitch" class="flex items-center">
               <span>Makeup lesson?</span>
-              <label class="ms-2" for="lesson_lesson_makeup_true">Yes</label>
+
+              <label class="ms-3" for="lesson_lesson_makeup_true">Yes</label>
               <input
-                class="ms-2 w-6"
+                class="ms-1 w-6 accent-[#480480]"
                 type="radio"
                 value="true"
                 name="lesson[makeup]"
                 id="lesson_makeup_true"
               />
-              <label class="ms-2" for="lesson_lesson_makeup_false">No</label>
+              <label class="ms-3" for="lesson_lesson_makeup_false">No</label>
               <input
-                class="ms-2 w-6"
+                class="ms-1 w-6 accent-[#480480]"
                 type="radio"
                 value="false"
                 name="lesson[makeup]"
@@ -227,10 +224,12 @@
             your Library 😉
           </div>
           <!-- Buttons-->
-          <div class="lesson-attachment-buttons flex align-items-center">
+          <div
+            class="lesson-attachment-buttons flex items-center flex-wrap gap-3"
+          >
             <button
               id="uploadcare-button"
-              class="bg-[#a7babe] flex align-items-center justify-center gap-x-2 font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full"
+              class="bg-[#a7babe] flex items-center justify-center gap-x-2 font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full"
             >
               <span class=""
                 ><svg
@@ -251,7 +250,7 @@
 
             <button
               id="tour_NewLesson_FaveButton"
-              class="ms-4 bg-[#a7babe] flex align-items-center gap-x-1 justify-center font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full fileinput-button toggle-faves-panel"
+              class="bg-[#a7babe] flex items-center gap-x-1 justify-center font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full fileinput-button toggle-faves-panel"
             >
               <span class=""
                 ><svg
@@ -272,7 +271,7 @@
 
             <button
               id="uploadcare-button-record"
-              class="button bg-[#e74c3c] flex align-items-center gap-x-1 justify-center font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full ms-4 fileinput-button"
+              class="button bg-[#e74c3c] flex items-center gap-x-1 justify-center font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full fileinput-button"
             >
               <span class=""
                 ><svg
@@ -304,7 +303,7 @@
             Step 5. When you&#39;re done, hit Post 🚀
           </div>
           <!-- Post Button  -->
-          <div class="flex mt-4 align-items-center gap-x-4">
+          <div class="flex mt-4 items-center gap-x-4">
             <button
               id=""
               class="py-3 bg-[#480480] text-white rounded-md px-8 text-[22px] font-bold max-w-[268px] w-full"
@@ -337,9 +336,7 @@
 
     <!-- Footer -->
     <footer class="bg-[#ddd] py-3 text-[#333333]">
-      <div
-        class="flex justify-between align-items-center max-w-[958px] mx-auto"
-      >
+      <div class="flex justify-between items-center max-w-[958px] mx-auto">
         <div>&copy; LessonMate 2024 [c41996b]</div>
         <div>
           <a href="/terms/">Terms</a>
