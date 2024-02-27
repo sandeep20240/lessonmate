@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="">
+  <body class>
     <div class="bg-[#dddddd] px-4">
       <header class="py-4 max-w-[958px] mx-auto">
         <div class="flex justify-between">
@@ -70,7 +70,7 @@
             >LessonMate at Demo School</a
           >
 
-          <span class="">
+          <span class>
             <a rel="nofollow" href="/">Sign In</a>
           </span>
         </div>
@@ -138,10 +138,13 @@
               </label>
             </div>
           </div>
+
+          <!-- Toggle Button -->
+
           <!-- Step 1  -->
           <div
             id="element-to-toggle"
-            class="py-3 mb-4 toogle-step text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
+            class="py-3 mb-4 toogle-step step-1 text-[#333333] font-medium bg-[#f3f3f3] border-[2px] border-[#dddddd] rounded-md px-3"
           >
             Step 1. Give your lesson a descriptive title your students can
             easily reference
@@ -224,71 +227,718 @@
             your Library 😉
           </div>
           <!-- Buttons-->
+
           <div
             class="lesson-attachment-buttons flex items-center flex-wrap gap-3"
           >
-            <button
-              id="uploadcare-button"
-              class="bg-[#a7babe] flex items-center justify-center gap-x-2 font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full"
-            >
-              <span class=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
-                    fill="white"
-                  />
-                </svg>
-              </span>
-              <span>Add New</span>
-            </button>
+            <!-- Modal Start -->
+            <div class="flex justify-between items-center">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="select-modal"
+                data-modal-toggle="select-modal"
+                class="bg-[#a7babe] flex items-center justify-center gap-x-2 font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full px-5"
+                type="button"
+              >
+                <span class
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+                <span>Add New</span>
+              </button>
 
-            <button
-              id="tour_NewLesson_FaveButton"
-              class="bg-[#a7babe] flex items-center gap-x-1 justify-center font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full fileinput-button toggle-faves-panel"
-            >
-              <span class=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
-                    fill="white"
-                  />
-                </svg>
-              </span>
-              <span>Add Fave</span>
-            </button>
+              <!-- Main modal -->
+              <div
+                id="select-modal"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+              >
+                <div class="relative p-4 w-full max-w-[960px] max-h-full">
+                  <!-- Modal content -->
+                  <div
+                    class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                  >
+                    <!-- Modal header -->
+                    <div
+                      class="flex items-center absolute top-0 end-0 justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                    >
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-toggle="select-modal"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                          />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="h-[calc(100vh-100px)]">
+                      <div class="sm:flex h-full">
+                        <ul
+                          class="flex-column space-y text-sm font-medium text-gray-500 bg-gray-300 h-full md:me-4 mb-4 md:mb-0 bg-[#E3E1E1]"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 bg-transparent w-full dark:hover:text-white hover:bg-gray-100"
+                              aria-current="page"
+                            >
+                              <img src="images/svg/file.svg" alt="file" />
+                              Local Files
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img src="images/svg/camera.svg" alt="camera" />
+                              Camera
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img src="images/svg/dropbox.svg" alt="dropbox" />
+                              Drop Box
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img src="images/svg/drive.svg" alt="drive" />
+                              Google Drive
+                            </a>
+                          </li>
+                          <li class="flex aligns-center w-full">
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img
+                                src="images/svg/googlephoto.svg"
+                                alt="googlephots"
+                              />
+                              Google Photos</a
+                            >
+                          </li>
+                        </ul>
+                        <div
+                          class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 w-full"
+                        >
+                          <h3
+                            class="text-lg font-bold text-gray-900 dark:text-white mb-2"
+                          >
+                            Profile Tab
+                          </h3>
+                          <p class="mb-2">
+                            This is some placeholder content the Profile tab's
+                            associated content, clicking another tab will toggle
+                            the visibility of this one for the next.
+                          </p>
+                          <p>
+                            The tab JavaScript swaps classes to control the
+                            content visibility and styling.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal End -->
 
-            <button
-              id="uploadcare-button-record"
-              class="button bg-[#e74c3c] flex items-center gap-x-1 justify-center font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full fileinput-button"
-            >
-              <span class=""
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
-                    fill="white"
-                  />
-                </svg>
-              </span>
-              <span>Record Video</span>
-            </button>
+            <!-- Second Button -->
+            <!-- Modal Start -->
+            <div class="flex justify-between items-center">
+              <!-- Modal toggle -->
+
+              <button
+                data-modal-target="select-modal-1"
+                data-modal-toggle="select-modal-1"
+                class="bg-[#a7babe] flex items-center justify-center gap-x-2 font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full px-5"
+                type="button"
+              >
+                <span class
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+                <span>Add Faves </span>
+              </button>
+
+              <!-- Main modal -->
+              <div
+                id="select-modal-1"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] h-screen"
+              >
+                <div class="relative p-4 w-full max-w-[960px] h-screen">
+                  <!-- Modal content -->
+                  <div
+                    class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                  >
+                    <!-- Modal header -->
+                    <div
+                      class="flex items-center justify-between p-4 md:p-5 border-b rounded-t bg-transparent"
+                    >
+                      <h3 class="font-semibold">Your Faves (10)</h3>
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-toggle="select-modal-1"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                          />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4">
+                      <div class="flex items-center gap-x-4">
+                        <h4 class="font-bold">Sort :</h4>
+                        <ul class="flex items-center inline-block gap-x-2">
+                          <li><a class="inline-block" href="">Name</a></li>
+                          <li><a class="inline-block" href="">Date</a></li>
+                        </ul>
+                        <h4 class="font-bold">Type :</h4>
+                        <ul class="flex items-center inline-block gap-x-2">
+                          <li><a class="inline-block" href="">Any</a></li>
+                          <li><a class="inline-block" href="">Video</a></li>
+                          <li><a class="inline-block" href="">Audio</a></li>
+                          <li><a class="inline-block" href="">Image</a></li>
+                          <li><a class="inline-block" href="">PDF</a></li>
+                        </ul>
+                      </div>
+                      <div class="md:flex h-full pt-3">
+                        <form class="w-full accordion mx-auto">
+                          <label
+                            for="default-search"
+                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                            >Search</label
+                          >
+                          <div class="relative">
+                            <div
+                              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                            >
+                              <svg
+                                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                                />
+                              </svg>
+                            </div>
+                            <input
+                              type="search"
+                              id="default-search"
+                              class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-[#480480] focus:border-[#480480] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#480480] dark:focus:border-[#480480]"
+                              placeholder="Search Mockups, Logos..."
+                              required
+                            />
+                            <!-- <button
+                              type="submit"
+                              class="text-white absolute end-2.5 bottom-2.5 bg-[#480480] hover:bg-[#480480] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Search
+                            </button> -->
+                          </div>
+                        </form>
+                      </div>
+                      <div
+                        class="mt-4 grid grid-cols-1 sm:grid-col-6 lg:grid-cols-3 gap-4 text-center border border-gray-300 rounded-lg p-3"
+                      >
+                        <div
+                          class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        >
+                          <a href="#">
+                            <img
+                              class="rounded-t-lg w-full"
+                              src="/images/png/angular.png"
+                              alt="angular"
+                            />
+                          </a>
+                          <div class="p-5">
+                            <a href="#">
+                              <h5
+                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                              >
+                                Angular
+                              </h5>
+                            </a>
+                            <p
+                              class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                              Add to folder
+                            </p>
+                            <a
+                              href="#"
+                              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#480480] rounded-lg hover:bg-[#480480]focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Add to Lesson
+                              <svg
+                                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        >
+                          <a href="#">
+                            <img
+                              class="rounded-t-lg w-full"
+                              src="/images/png/beatles.avif"
+                              alt="beatles"
+                            />
+                          </a>
+                          <div class="p-5">
+                            <a href="#">
+                              <h5
+                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                              >
+                                Angular
+                              </h5>
+                            </a>
+                            <p
+                              class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                              Add to folder
+                            </p>
+                            <a
+                              href="#"
+                              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#480480] rounded-lg hover:bg-[#480480]focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Add to Lesson
+                              <svg
+                                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        >
+                          <a href="#">
+                            <img
+                              class="rounded-t-lg w-full"
+                              src="/images/png/angular.png"
+                              alt="angular"
+                            />
+                          </a>
+                          <div class="p-5">
+                            <a href="#">
+                              <h5
+                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                              >
+                                Angular
+                              </h5>
+                            </a>
+                            <p
+                              class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                              Add to folder
+                            </p>
+                            <a
+                              href="#"
+                              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#480480] rounded-lg hover:bg-[#480480]focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Add to Lesson
+                              <svg
+                                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        >
+                          <a href="#">
+                            <img
+                              class="rounded-t-lg w-full"
+                              src="/images/png/angular.png"
+                              alt="angular"
+                            />
+                          </a>
+                          <div class="p-5">
+                            <a href="#">
+                              <h5
+                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                              >
+                                Angular
+                              </h5>
+                            </a>
+                            <p
+                              class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                              Add to folder
+                            </p>
+                            <a
+                              href="#"
+                              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#480480] rounded-lg hover:bg-[#480480]focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Add to Lesson
+                              <svg
+                                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        >
+                          <a href="#">
+                            <img
+                              class="rounded-t-lg w-full"
+                              src="/images/png/angular.png"
+                              alt="angular"
+                            />
+                          </a>
+                          <div class="p-5">
+                            <a href="#">
+                              <h5
+                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                              >
+                                Angular
+                              </h5>
+                            </a>
+                            <p
+                              class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                              Add to folder
+                            </p>
+                            <a
+                              href="#"
+                              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#480480] rounded-lg hover:bg-[#480480]focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Add to Lesson
+                              <svg
+                                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                        <div
+                          class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                        >
+                          <a href="#">
+                            <img
+                              class="rounded-t-lg w-full"
+                              src="/images/png/angular.png"
+                              alt="angular"
+                            />
+                          </a>
+                          <div class="p-5">
+                            <a href="#">
+                              <h5
+                                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                              >
+                                Angular
+                              </h5>
+                            </a>
+                            <p
+                              class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                            >
+                              Add to folder
+                            </p>
+                            <a
+                              href="#"
+                              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#480480] rounded-lg hover:bg-[#480480]focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-[#480480] dark:hover:bg-[#480480] dark:focus:ring-[#480480]"
+                            >
+                              Add to Lesson
+                              <svg
+                                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal End -->
+
+            <!-- Modal Start -->
+            <div class="flex justify-between items-center">
+              <!-- Modal toggle -->
+              <button
+                data-modal-target="select-modal-2"
+                data-modal-toggle="select-modal-2"
+                class="bg-[#e74c3c] flex items-center justify-center gap-x-2 font-semibold text-white py-3 max-w-[166px] rounded-[4px] w-full px-5"
+                type="button"
+              >
+                <span class
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 12.998H13V17.998C13 18.2633 12.8946 18.5176 12.7071 18.7052C12.5196 18.8927 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8927 11.2929 18.7052C11.1054 18.5176 11 18.2633 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8927 5.29289 12.7052C5.10536 12.5176 5 12.2633 5 11.998C5 11.7328 5.10536 11.4785 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.99805C11 5.73283 11.1054 5.47848 11.2929 5.29094C11.4804 5.1034 11.7348 4.99805 12 4.99805C12.2652 4.99805 12.5196 5.1034 12.7071 5.29094C12.8946 5.47848 13 5.73283 13 5.99805V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4785 19 11.7328 19 11.998C19 12.2633 18.8946 12.5176 18.7071 12.7052C18.5196 12.8927 18.2652 12.998 18 12.998Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+                <span class="whitespace-nowrap">Record Video</span>
+              </button>
+
+              <!-- Main modal -->
+              <div
+                id="select-modal-2"
+                tabindex="-1"
+                aria-hidden="true"
+                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+              >
+                <div class="relative p-4 w-full max-w-[960px] max-h-full">
+                  <!-- Modal content -->
+                  <div
+                    class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                  >
+                    <!-- Modal header -->
+                    <div
+                      class="flex items-center absolute top-0 end-0 justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+                    >
+                      <button
+                        type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-toggle="select-modal-2"
+                      >
+                        <svg
+                          class="w-3 h-3"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 14 14"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                          />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                      </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="h-[calc(100vh-100px)]">
+                      <div class="sm:flex h-full">
+                        <ul
+                          class="flex-column space-y text-sm font-medium text-gray-500 bg-gray-300 h-full md:me-4 mb-4 md:mb-0 bg-[#E3E1E1]"
+                        >
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 bg-transparent w-full dark:hover:text-white hover:bg-gray-100"
+                              aria-current="page"
+                            >
+                              <img src="images/svg/file.svg" alt="file" />
+                              Local Files
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-white hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img src="images/svg/camera.svg" alt="camera" />
+                              Camera
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img src="images/svg/dropbox.svg" alt="dropbox" />
+                              Drop Box
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img src="images/svg/drive.svg" alt="drive" />
+                              Google Drive
+                            </a>
+                          </li>
+                          <li class="flex aligns-center w-full">
+                            <a
+                              href="#"
+                              class="inline-flex items-center min-w-[200px] px-4 py-4 gap-x-3 hover:text-gray-900 bg-transparent hover:bg-gray-100 w-full dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+                            >
+                              <img
+                                src="images/svg/googlephoto.svg"
+                                alt="googlephots"
+                              />
+                              Google Photos</a
+                            >
+                          </li>
+                        </ul>
+                        <div
+                          class="p-6 bg-gray-50 text-medium text-gray-500 dark:text-gray-400 dark:bg-gray-800 w-full"
+                        >
+                          <h3
+                            class="text-lg font-bold text-gray-900 dark:text-white mb-2"
+                          >
+                            Profile Tab
+                          </h3>
+                          <p class="mb-2">
+                            This is some placeholder content the Profile tab's
+                            associated content, clicking another tab will toggle
+                            the visibility of this one for the next.
+                          </p>
+                          <p>
+                            The tab JavaScript swaps classes to control the
+                            content visibility and styling.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal End -->
 
             <i
               id="tip_attachment_buttons"
@@ -305,7 +955,7 @@
           <!-- Post Button  -->
           <div class="flex mt-4 items-center gap-x-4">
             <button
-              id=""
+              id
               class="py-3 bg-[#480480] text-white rounded-md px-8 text-[22px] font-bold max-w-[268px] w-full"
             >
               Post Lesson
@@ -357,7 +1007,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://sdk.fleeq.io/fleeq-sdk-light.js"></script>
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
